@@ -1,25 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Container } from './App.styles';
+import { Header } from './components/Header';
+import { Home } from './components/Home';
+import { About } from './components/About';
+import { useEffect } from "react";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
+  useEffect(() => {
+    let url = window.location.href.split("/");
+    let target = url[url.length - 1].toLowerCase();
+    let element = document.getElementById(target);
+    element && element.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Container>
+        <Header />
+        <Home />
+        <main id="main">
+          <About />
+        </main>
+      </Container>
+    </BrowserRouter>
   );
 }
 
