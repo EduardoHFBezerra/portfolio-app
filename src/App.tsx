@@ -1,5 +1,5 @@
 import { Container } from './App.styles';
-import { Header } from './components/Header';
+import { Sidebar } from './components/Sidebar';
 import { Home } from './components/Home';
 import { About } from './components/About';
 import { useEffect } from "react";
@@ -16,7 +16,7 @@ function App() {
   return (
     <BrowserRouter>
       <Container>
-        <Header />
+        <Sidebar />
         <Home />
         <main id="main">
           <About />

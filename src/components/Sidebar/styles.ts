@@ -1,17 +1,32 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+type ContainerProps = {
+    isOpen: boolean;
+}
+
+export const Container = styled.div(({ isOpen }: ContainerProps) => (`
     position: fixed;
     top: 0;
-    left: 0;
     bottom: 0;
+    left: 0;
     width: 300px;
-    transition: all ease-in-out 0.5s;
     z-index: 9997;
-    transition: all 0.5s;
     padding: 0 15px;
     background: #040b14;
     overflow-y: auto;
+    transition: 0.5s;
+
+    @media (max-width: 992px) {
+        left: -300px;
+
+        ~ #main {
+            margin-left: 0 !important;
+        }
+    }
+    
+    &.active {
+        left: 0;
+    }
 
     .profile img {
         margin: 15px auto;
@@ -74,7 +89,7 @@ export const Container = styled.div`
         padding: 12px 15px;
         margin-bottom: 8px;
         transition: 0.3s;
-        font-size: 16px;
+        font-size: 18px;
     }
       
     .nav-menu a svg,
@@ -98,5 +113,10 @@ export const Container = styled.div`
     .nav-menu li:hover>a svg {
         color: #149ddd;
     }
+
+    ~ #main {
+        margin-left: ${isOpen ? '0': '300px'};
+        transition: 0.5s;
+    }
     `
-;
+));

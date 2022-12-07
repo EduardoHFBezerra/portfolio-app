@@ -1,7 +1,6 @@
 export type NavItem = {
-    id: number;
     to: string;
-    text: string;
+    name: string;
     icon: JSX.Element;
     section: string;
-}
+};

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Section = styled.section`
+export const Container = styled.section`
     color: #939393;
 
     h2 {
@@ -36,5 +36,15 @@ export const Section = styled.section`
         margin-right: 5px;
         color: #149ddd;
         line-height: 0;
+    }
+
+    .content ul li {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    .content ul strong {
+        margin-right: 10px;
     }
 `;

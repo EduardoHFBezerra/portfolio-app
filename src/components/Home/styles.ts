@@ -67,11 +67,10 @@ export const Section = styled.section`
 `;
 
 const fadeIn = keyframes`
-  from {
-    transform: translateY(100%);
+  0% {
     opacity: 0;
   }
-  to {
+  100% {
     opacity: 1;
   }
 `;
