@@ -66,51 +66,32 @@ export const Container = styled.div(({ isOpen }: ContainerProps) => (`
         text-decoration: none;
     }
 
-    .nav-menu {
+    .navbar {
         padding: 30px 0 0 0;
     }
       
-    .nav-menu * {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
-      
-    .nav-menu>ul>li {
-        position: relative;
-        white-space: nowrap;
-    }
-      
-    .nav-menu a,
-    .nav-menu a:focus {
-        display: flex;
-        align-items: center;
+    .nav-link {
         color: #a8a9b4;
         padding: 12px 15px;
         margin-bottom: 8px;
+        align-items: center;
+        display: flex;
         transition: 0.3s;
+        line-height: 28px;
         font-size: 18px;
     }
       
-    .nav-menu a svg,
-    .nav-menu a:focus svg {
-        font-size: 24px;
+    .nav-link svg {
+        font-size: 28px;
         padding-right: 8px;
         color: #6f7180;
     }
-      
-    .nav-menu a:hover,
-    .nav-menu .active,
-    .nav-menu .active:focus,
-    .nav-menu li:hover>a {
-        text-decoration: none;
+
+    .nav-link.active, .nav-link:hover {
         color: #fff;
     }
-      
-    .nav-menu a:hover svg,
-    .nav-menu .active svg,
-    .nav-menu .active:focus svg,
-    .nav-menu li:hover>a svg {
+
+    .nav-link.active svg, .nav-link:hover svg {
         color: #149ddd;
     }
 

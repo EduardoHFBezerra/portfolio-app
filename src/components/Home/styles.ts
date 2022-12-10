@@ -54,29 +54,27 @@ export const Section = styled.section`
 
     @media (max-width: 768px) {
         h1 {
-            font-size: 28px;
+            font-size: 34px;
             line-height: 36px;
         }
 
-        h2 {
+        p {
             font-size: 18px;
-            line-height: 24px;
-            margin-bottom: 30px;
         }
     }
 `;
 
 const fadeIn = keyframes`
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 `;
 
 export const FadeIn = styled.div`
-  animation: ${fadeIn} 1.5s ease-in-out;
-  animation-duration: 1s;
-  animation-fill-mode: both;
+    animation: ${fadeIn} 1.5s ease-in-out;
+    animation-duration: 1s;
+    animation-fill-mode: both;
 `;

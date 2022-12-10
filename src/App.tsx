@@ -1,28 +1,17 @@
 import { Container } from './App.styles';
-import { Sidebar } from './components/Sidebar';
 import { Home } from './components/Home';
 import { About } from './components/About';
-import { useEffect } from "react";
-import { BrowserRouter } from "react-router-dom";
+import { Sidebar } from './components/Sidebar';
 
 function App() {
-  useEffect(() => {
-    let url = window.location.href.split("/");
-    let target = url[url.length - 1].toLowerCase();
-    let element = document.getElementById(target);
-    element && element.scrollIntoView({ behavior: "smooth", block: "start" });
-  }, []);
-
   return (
-    <BrowserRouter>
-      <Container>
-        <Sidebar />
+    <Container>
+      <Sidebar />
+      <main id ="main">
         <Home />
-        <main id="main">
-          <About />
-        </main>
-      </Container>
-    </BrowserRouter>
+        <About />
+      </main>
+    </Container>
   );
 }
 

@@ -6,7 +6,10 @@ import { AnimationOnScroll } from "react-animation-on-scroll";
 export const About = () => {
   return (
     <>
-      <Container id="about" className="about">
+      <Container
+        id="about"
+        className="about"
+      >
         <div className="container">
           <div className="pb-3">
             <h2>Sobre</h2>
@@ -33,7 +36,10 @@ export const About = () => {
               </AnimationOnScroll>
             </div>
             <div className="col-lg-9 pt-4 pt-lg-0 content">
-              <AnimationOnScroll delay={200} animateIn="animate__fadeInLeftBig">
+              <AnimationOnScroll
+                delay={200}
+                animateIn="animate__fadeInLeftBig"
+              >
                 <h3>Informações Pessoais</h3>
                 <p className="fst-italic">
                   Estou sempre em busca de oportunidades desafiadoras que exigem

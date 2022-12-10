@@ -3,12 +3,11 @@ import Typed from "typed.js";
 import { useEffect, useRef } from "react";
 
 export const Home = () => {
-  // Create Ref element.
   const el = useRef(null!);
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["I'm a Full Stack Developer", "I Love Software Development", "I Love to code"],
+      strings: ["I'm a Full Stack Developer", "I Love Software Development", "I Love code"],
       startDelay: 500,
       typeSpeed: 100,
       backSpeed: 50,
